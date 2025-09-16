@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Mode Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="top-bar">
+      <select id="mode-select">
+        <option value="standard">Standard</option>
+        <option value="scientific">Scientific</option>
+        <option value="programmer">Programmer</option>
+        
+      </select>
+        <!-- Slide-down History -->
+    <div class="history-dropdown" id="history-panel">
+      <div class="history-header">
+        <h3>History</h3>
+        <button id="clear-history">Clear</button>
+      </div>
+      <ul id="history-list"></ul>
+    </div>
+      <div class="actions">
+        <button id="history-toggle">📜</button>
+        <button id="theme-toggle">🌙</button>
+      </div>
+    </div>
+
+    <div class="display">
+      <div id="history"></div>
+      <div id="result">0</div>
+    </div>
+
+    <!-- Buttons Grid -->
+    <div class="buttons" id="buttons"></div>
+  </div>
+
+    
+
+
+  <script src="script.js"></script>
+</body>
+</html>
