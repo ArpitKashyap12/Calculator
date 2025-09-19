@@ -160,11 +160,18 @@ expr = expr
     return;
   }
 
-  /* reset screen after evaluation if user starts typing a number */
-  if (resetScreen && !["+", "-", "×", "÷"].includes(value)) {
+  /* reset screen after evaluation */
+if (resetScreen) {
+  if (["+", "-", "×", "÷"].includes(value)) {
+    // Continue calculation with last result
+    resetScreen = false;
+  } else {
+    // If user starts typing a number or function, clear old result
     current = "";
     resetScreen = false;
   }
+}
+
 
   /* default append */
   current += value;
